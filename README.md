@@ -36,15 +36,27 @@ Fedora:
 
 `dnf install meson gdk-pixbuf2-devel librsvg2-devel rubygem-sass`
 
-### Build and install
+
+### Build and Install ###
+
+#### Local (User) Install ####
 
 ```
-meson builddir
+meson --prefix=$HOME/.local builddir
 cd builddir
 ninja
-sudo ninja install
+ninja install
+ln -sf ~/.local/share/themes ~/.themes # Required for GTK2
 ```
 
+#### System Install ####
+
+```
+meson --prefix=/usr builddir
+cd builddir
+ninja
+ninja install
+```
 ### Copyright ###
 Greybird is dual-licensed as GPLv2 or later and CC-BY-SA 3.0 or later.
 
