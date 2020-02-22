@@ -193,15 +193,6 @@ metacity_files = files([
 ])
 
 #
-# Xfce Notify 4.0 Files
-#
-
-xfce_notify_files = files([
-    'xfce-notify-4.0/gtk.css',
-    'xfce-notify-4.0/gtkrc'
-])
-
-#
 # Xfwm4 Files
 #
 
@@ -507,7 +498,7 @@ if not get_option('flatpak')
     install_data(gtk2_assets, install_dir : join_paths(theme_path, 'gtk-2.0/assets'))
     install_data(['gnome-shell/gnome-shell.css'], install_dir : join_paths (theme_path, 'gnome-shell'))
     install_data(metacity_files, install_dir : join_paths (theme_path, 'metacity-1'))
-    install_data(xfce_notify_files, install_dir : join_paths (theme_path, 'xfce-notify-4.0'))
+    # install_data(xfce_notify_files, install_dir : join_paths (theme_path, 'xfce-notify-4.0'))
     install_data(xfwm4_files, install_dir : join_paths (theme_path, 'xfwm4'))
     install_data(xfwm4_a11y_files, install_dir : join_paths (a11y_theme_path, 'xfwm4'))
     # we're not installing xfwm compact for dark
