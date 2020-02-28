@@ -1,8 +1,6 @@
 theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Light')
 a11y_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Light-Accessibility')
 compact_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-Light-Compact')
-alt_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko')
-bright_theme_path = join_paths(get_option('datadir'), 'themes/Greybird-Geeko-bright')
 
 #
 # GTK+-2.0 Files
@@ -200,15 +198,6 @@ metacity_files = files([
 xfce_notify_files = files([
     'xfce-notify-4.0/gtk.css',
     'xfce-notify-4.0/gtkrc'
-])
-
-#
-# Xfce Notify 4.0 Bright Files
-#
-
-xfce_notify_bright_files = files([
-    'xfce-notify-4.0_bright/gtk.css',
-    'xfce-notify-4.0_bright/gtkrc'
 ])
 
 #
@@ -608,8 +597,7 @@ if not get_option('flatpak')
     install_data(gtk2_assets, install_dir : join_paths(theme_path, 'gtk-2.0/assets'))
     install_data(['gnome-shell/gnome-shell.css'], install_dir : join_paths (theme_path, 'gnome-shell'))
     install_data(metacity_files, install_dir : join_paths (theme_path, 'metacity-1'))
-    install_data(xfce_notify_files, install_dir : join_paths (alt_theme_path, 'xfce-notify-4.0'))
-    install_data(xfce_notify_bright_files, install_dir : join_paths (bright_theme_path, 'xfce-notify-4.0'))
+    install_data(xfce_notify_files, install_dir : join_paths (theme_path, 'xfce-notify-4.0'))
     install_data(xfwm4_files, install_dir : join_paths (theme_path, 'xfwm4'))
     install_data(xfwm4_a11y_files, install_dir : join_paths (a11y_theme_path, 'xfwm4'))
     install_data(xfwm4_compact_files, install_dir : join_paths (compact_theme_path, 'xfwm4'))
