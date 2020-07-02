@@ -1,0 +1,29 @@
+Source: greybird-geeko-gtk-theme
+Section: x11
+Priority: optional
+Maintainer: Maurizio Galli <maurizio.galli@gmail.com>
+Build-Depends:
+ debhelper-compat (= 12),
+ libgdk-pixbuf2.0-dev,
+ librsvg2-dev,
+ meson,
+ sassc
+Rules-Requires-Root: no
+Standards-Version: 4.5.0
+Vcs-Git: https://github.com/shimmerproject/Greybird-Geeko.git -b debian
+Vcs-Browser: https://github.com/shimmerproject/Greybird-Geeko
+Homepage: https://github.com/shimmerproject/Greybird-Geeko
+
+Package: greybird-geeko-gtk-theme
+Architecture: all
+Depends:
+ gtk2-engines-murrine (>= 0.98),
+ ${misc:Depends}
+Description: Modified version of the Greybird theme with openSUSE branding elements. 
+ Greybird-Geeko is the default Xfce theme in openSUSE and is based on Greybird,
+ which is the default theme in Xubuntu 11.04 onwards. 
+ .
+ The Shimmer Project are the designers and developers of both themes.
+ .
+ Although originally created for Xfce, Greybird Geeko also supports other
+ GTK+-based environments including Cinnamon, GNOME Shell, MATE, and Unity.
