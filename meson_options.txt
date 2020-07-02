@@ -1,3 +1,0 @@
-option('generate_sourcemaps', type: 'boolean', value: false)
-option('flatpak', type: 'boolean', value: false)
-option('flatpak-variant', type: 'combo', choices : ['light', 'dark'], value: 'light')
