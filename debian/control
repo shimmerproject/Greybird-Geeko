@@ -19,9 +19,9 @@ Architecture: all
 Depends:
  gtk2-engines-murrine (>= 0.98),
  ${misc:Depends}
-Description: Modified version of the Greybird theme with openSUSE branding elements. 
+Description: Modified version of the Greybird theme with openSUSE branding elements.
  Greybird-Geeko is the default Xfce theme in openSUSE and is based on Greybird,
- which is the default theme in Xubuntu 11.04 onwards. 
+ which is the default theme in Xubuntu 11.04 onwards.
  .
  The Shimmer Project are the designers and developers of both themes.
  .
