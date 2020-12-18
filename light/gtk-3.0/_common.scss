@@ -3385,7 +3385,6 @@ progressbar {
     @extend %scale_highlight;
 
     border: 1px solid shade($selected_bg_color, 0.7);
-
     border-radius: 3px;
 
     &.left {
@@ -3795,6 +3794,7 @@ messagedialog { // Message Dialog styling
         &:last-child {
           border-bottom-right-radius: 7px;
           -gtk-outline-bottom-right-radius: 5px;
+        }
       }
     }
   }
