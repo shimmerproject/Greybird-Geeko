@@ -71,7 +71,7 @@ gtk_dark_gresources = custom_target('gtk-dark-gresources',
 
 # we don't want to install these in the flatpak
 if not get_option('flatpak')
-    install_data('Greybird-geeko.emerald', rename: 'Greybird-dark.emerald', install_dir : theme_path)
+    install_data('Greybird-geeko.emerald', install_dir : theme_path)
     install_subdir('gtk-2.0', install_dir : theme_path)
     install_subdir('gnome-shell', install_dir : theme_path)
     install_subdir('metacity-1', install_dir : theme_path)
