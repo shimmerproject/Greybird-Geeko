@@ -544,6 +544,7 @@ button {
     }
 
     @at-root %button_basic_flat,
+    .toolbar &,
     &.flat {
       @include button(undecorated);
       // to avoid adjacent buttons borders clashing when transitioning, the transition on the normal state is set
@@ -1368,6 +1369,7 @@ combobox {
   background-color: $bg_color;
 }
 
+.toolbar,
 toolbar {
   @extend %toolbar;
   @include headerbar_fill;
@@ -2158,6 +2160,7 @@ menubar,
 
   &:backdrop { background-color: $backdrop_bg_color; }
 
+  > item,
   > menuitem {
     min-height: 16px;
     padding: 3px 8px;
@@ -3958,7 +3961,6 @@ filechooserbutton:drop(active) {
 .sidebar {
   border-style: none;
   background-color: $sidebar_bg_color;
-  -gtk-icon-style: regular;
 
   row,
   treeview,
